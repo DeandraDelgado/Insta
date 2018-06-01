@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>InstaDea</title>
+</head>
+<body>
+	<nav>
+		<div class="nav-container">
+			<div class="logo">
+				<img src="logo.png">
+			</div>
+		</div>
+		<div class="input">
+		<img class='lupita' src="lupita.png">
+			<input placeholder= "Buscar" type="text" value="" style="">
+		</div>
+			<div>
+				<img class='iconos' src="iconos.jpg">
+			</div>
+	</nav>
+	
+	{{#each feed}}
+	<div class="container">
+		<div><img src="{{this.img}}"></div>
+		<div class="info">
+			<img class="cora" src="cora.png" data-id="{{this.id}}"> 
+			<p>{{this.likes}}</p> 
+			<p>{{this.titulo}}</p>
+		</div>
+	</div>
+
+		{{/each}}
+	</div>
+	</div>
+</body>
+</html>
