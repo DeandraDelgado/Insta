@@ -7,4 +7,8 @@ router.get('/', imagencontroller.insta);
 
 router.put('/update', imagencontroller.update);
 
+
+
+
+
 module.exports = router;

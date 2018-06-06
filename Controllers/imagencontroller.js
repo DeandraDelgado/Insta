@@ -1,27 +1,27 @@
 let self = {}
 
-self.imagen=   [ {
+self.imagen =  [ {
 										id: 1,
-										img: 'http://cocinarte.co/wp-content/uploads/2016/10/patacon.jpg',
+										img: 'http://www.pantone.com/images/products/GG6103N-pantone-graphics-pms-srgb-cmyk-hex-color-bridge-coated-product-2.jpg',
 									 	likes: 0,
-									 	titulo: 'Patacon'},
+									 	titulo: 'pantone'},
 									 {
 									 	id: 2,
-									 	img: 'https://i.ytimg.com/vi/4W4z6eFOMwQ/maxresdefault.jpg',
+									 	img: 'https://www.pantone.com/images/products/DRIVE-COY18-pantone-lifestyle-chip-drive-ultra-violet-18-3838-product-1.jpg',
 									 	likes: 0,
-									 	titulo: 'Cachapa'
+									 	titulo: 'Violet'
 									 },
 									 {
 									 	id: 3,
-									 	img: 'http://cookimia.com/wp-content/uploads/2012/11/pabellon.jpg',
+									 	img: 'https://www.pantone.com/images/products/DRIVE-COY17-pantone-color-of-the-year-2017-greenery-15-0343-usb-chip-thumb-drive.jpg',
 									 	likes: 0,
-									 	titulo: 'Pabellon'
+									 	titulo: 'Green'
 									 },
 									 {
 									 	id: 4,
-									 	img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKrUWZq-vKNgQNtfU_wv-Pr4boEiyb8ytHFBc6pXyBehpS6ka3',
+									 	img: 'http://blog.visme.co/wp-content/uploads/2018/01/The-2013-Color-of-the-Year-Emerald-2.jpg',
 									 	likes: 0,
-									 	titulo: 'Arepa'
+									 	titulo: 'Esmerald'
 									 }
 	];
 
@@ -31,18 +31,14 @@ self.insta = function(req, res){
 }
 
 self.update = function(req, res) {
-	let likes = 0 
-  for (var i = 0; i < self.imagen.length; i++) {
+	let likes = 0
+  for (var i = 0; i< self.imagen.length; i++) {
     if (self.imagen[i].id == req.body.id) {
-      console.log(self.imagen[i])
       self.imagen[i]['likes'] = parseInt(self.imagen[i]['likes']) + 1
-
       likes = self.imagen[i]['likes']
-      console.log(self.imagen[i])
     }
   }
-  res.joson({likes:likes})
+  res.json({likes:likes})
 }
-
 
 module.exports = self

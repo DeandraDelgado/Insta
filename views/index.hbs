@@ -5,12 +5,10 @@
 </head>
 <body>
 	<nav>
-		<div class="nav-container">
 			<div class="logo">
-				<img src="logo.png">
+				<img class="logo" src="logo.png">
 			</div>
-		</div>
-		<div class="input">
+		<div class="in">
 		<img class='lupita' src="lupita.png">
 			<input placeholder= "Buscar" type="text" value="" style="">
 		</div>
@@ -18,19 +16,21 @@
 				<img class='iconos' src="iconos.jpg">
 			</div>
 	</nav>
-	
+
 	{{#each feed}}
 	<div class="container">
-		<div><img src="{{this.img}}"></div>
+		<div><img class="imagenes" src="{{this.img}}"></div>
 		<div class="info">
-			<img class="cora" src="cora.png" data-id="{{this.id}}"> 
-			<p>{{this.likes}}</p> 
-			<p>{{this.titulo}}</p>
+			<img class="cora" src="cora.png" data-id="{{this.id}}">
+			<p>{{this.likes}}  </p>
+			<p>{{this.titulo}}  </p>
 		</div>
 	</div>
-
-		{{/each}}
-	</div>
-	</div>
+	{{/each}}
+	<script
+	 src="http://code.jquery.com/jquery-3.3.1.min.js"
+	 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+	 <script type="text/javascript" src="/javascripts/main.js"></script>
 </body>
 </html>
