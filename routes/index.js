@@ -7,8 +7,8 @@ router.get('/', imagencontroller.insta);
 
 router.put('/update', imagencontroller.update);
 
+//router.get('/productos/:id', imagencontroller.productos)
 
-
-
+router.get('/imagen/:id', imagencontroller.imagen)
 
 module.exports = router;

@@ -25,7 +25,7 @@ self.imagen =  [ {
 									 }
 	];
 
-self.insta = function(req, res){
+	self.insta = function(req, res){
 
 	res.render('index', {feed: self.imagen});
 }
@@ -39,6 +39,11 @@ self.update = function(req, res) {
     }
   }
   res.json({likes:likes})
+}
+
+self.imagen = function(req, res) {
+	var pic = req.params.id
+	res.render('images', {feed: pic});
 }
 
 module.exports = self
